@@ -17,26 +17,30 @@ OUT={}
 # ---------------- 2: TEASE (teal, offers lead, Gino supporting) ----------------
 css2='''
 .q{position:absolute;font-weight:900;color:rgba(255,255,255,.4);line-height:1}
-.h2{position:absolute;left:72px;top:128px;z-index:4;font-weight:900;text-transform:uppercase;line-height:.92;color:var(--pink);-webkit-text-stroke:12px var(--white);paint-order:stroke fill;filter:drop-shadow(0 7px 0 var(--black))}
-.h2 .a{font-size:150px;display:block}
-.h2 .b{font-size:54px;display:block;margin-top:6px;letter-spacing:.01em}
+.h2{position:absolute;left:72px;top:222px;z-index:4;font-weight:900;text-transform:uppercase;line-height:.92;color:var(--pink);-webkit-text-stroke:12px var(--white);paint-order:stroke fill;filter:drop-shadow(0 7px 0 var(--black))}
+.h2 .a{font-size:122px;display:block}
+.h2 .b{font-size:122px;display:block;margin-top:4px;letter-spacing:.01em}
+.eyebrow{position:absolute;left:72px;top:130px;z-index:5;background:var(--pink);color:var(--white);font-weight:900;font-size:30px;letter-spacing:.12em;padding:8px 24px;border-radius:12px;border:5px solid var(--white);box-shadow:0 5px 0 var(--black);transform:rotate(-2deg)}
 .offer{position:absolute;z-index:5;border-radius:34px;box-shadow:0 10px 0 var(--black);border:7px solid var(--white)}
-.o1{left:56px;top:430px;width:968px;background:var(--pink);color:var(--white);transform:rotate(-2.5deg);padding:34px 44px 36px}
+.o1{left:56px;top:490px;width:968px;background:var(--pink);color:var(--white);transform:rotate(-2.5deg);padding:34px 44px 36px}
 .o1 .l1{font-weight:900;font-size:56px;line-height:1}
-.o1 .l2{font-weight:900;font-size:150px;line-height:.92;letter-spacing:-.01em;margin-top:4px}
+.o1 .l2{font-weight:900;font-size:140px;line-height:.92;letter-spacing:-.01em;margin-top:4px}
 .o1 .l3{display:inline-block;margin-top:14px;background:var(--teal);color:var(--pink);font-weight:900;font-size:38px;letter-spacing:.04em;padding:8px 22px;border-radius:14px}
-.o2{left:56px;top:830px;width:600px;background:var(--white);color:var(--pink);transform:rotate(2deg);padding:28px 38px 30px}
+.o2{left:56px;top:880px;width:620px;background:var(--white);color:var(--pink);transform:rotate(2deg);padding:28px 38px 30px}
 .o2 .l1{font-weight:900;font-size:50px;line-height:1}
-.o2 .l2{font-weight:900;font-size:176px;line-height:.95;color:var(--coral);letter-spacing:-.02em;margin-top:2px}
-.o2 .l3{font-weight:800;font-size:28px;color:#2a2a2a;margin-top:4px}
+.o2 .row{display:flex;align-items:center;gap:22px;margin-top:10px}
+.o2 .lock{flex:none;width:150px;height:150px}
+.o2 .l2{font-weight:900;font-size:44px;line-height:1.05;color:var(--coral)}
+.o2 .l3{font-weight:800;font-size:26px;color:#2a2a2a;margin-top:8px}
 '''
 b2=f'''
 <img class="logo" src="assets/logo-lockup.png" alt="giga! 5G+ feels good" style="left:72px;top:52px;width:400px">
 <div class="q" style="right:-60px;top:20px;font-size:520px;transform:rotate(14deg)">?</div>
-<h1 class="h2"><span class="a">Psst!</span><span class="b">Big deals are coming</span></h1>
+<div class="eyebrow">PSST! BIG DEALS ARE COMING</div>
+<h1 class="h2"><span class="a">Tech Show</span><span class="b">2026 Promo</span></h1>
 <div class="offer o1"><div class="l1">BUY 1 MONTH,</div><div class="l2">GET 2 FREE!</div><div class="l3">AS LOW AS $5.30/MTH</div></div>
-<div class="offer o2"><div class="l1">GOLDEN NUMBERS</div><div class="l2">$?.??</div><div class="l3">Price unlocked at the booth</div></div>
-<img class="gino" src="assets/gino-cool.png" style="left:735px;top:800px;width:240px;z-index:4" alt="Gino">
+<div class="offer o2"><div class="l1">GOLDEN NUMBERS</div><div class="row"><svg class="lock" viewBox="0 0 100 100"><path d="M30 44V32a20 20 0 0 1 40 0v12" fill="none" stroke="#ED1285" stroke-width="10" stroke-linecap="round"/><rect x="18" y="42" width="64" height="48" rx="12" fill="#FF6F5C" stroke="#ED1285" stroke-width="6"/><circle cx="50" cy="63" r="7" fill="#fff"/><rect x="47" y="66" width="6" height="14" rx="3" fill="#fff"/></svg><div class="l2">PRICE<br>REVEALED<br>AT THE BOOTH</div></div></div>
+<img class="gino" src="assets/gino-cool.png" style="left:745px;top:850px;width:230px;z-index:4" alt="Gino">
 {strip('teal')}
 {fine('Offers available at The Tech Show 2026, 13–15 Nov, while stocks last. T&amp;Cs apply.','rgba(0,0,0,.65)')}'''
 OUT['post-2-tease']=HEAD.format(t='Post 2: Tease',css=css2,bg='background:var(--teal)',body=b2)
