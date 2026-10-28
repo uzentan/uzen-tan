@@ -48,6 +48,14 @@ Before designing, look at 2 or 3 files in `examples/` so new work matches the es
 9. **No invented venue art.** A drawn Suntec skyline was rejected as inaccurate. Use text for the venue unless the user supplies a reference.
 10. Real photos, floor plans and prizes go in clearly marked dashed placeholders (`data-placeholder="..."`) until the user supplies them.
 
+## Venue and event wording
+
+For the Tech Show 2026 campaign the venue line is always "Suntec City Convention Centre, Level 4" (no hall numbers), with booth 8428 and 13–15 Nov. Use this exact wording on every post, including map headers.
+
+## gigaAI (product carousels)
+
+`assets/giga-ai-logo.svg` is the gigaAI wordmark ("Powered by AI Fiesta"). It is pink, so it disappears on a pink background: always place it on a white rounded card. `assets/gigaai/` holds screenshots of six features (Image Studio, Video Studio, Live Websites, Slides, Multi Chat, Experts & Legends). `tools/build_carousel.py` builds an 8-slide carousel: cover, one slide per feature, call to action. Keep gigaAI copy to what the supplied slides say; do not claim speeds or capabilities that are not in them.
+
 ## Workflow
 
 1. Gather the facts: event, dates, venue, booth, offers and exact wording, T&Cs, and any usual prices. Ask for anything missing. Never invent prices, prizes or T&Cs. If wording is a stand-in, say so.

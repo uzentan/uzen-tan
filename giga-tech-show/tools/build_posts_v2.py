@@ -9,7 +9,7 @@ HEAD='''<!DOCTYPE html>
 def strip(color='pink', top=1254, left=72):
     w = 'var(--pink)' if color=='teal' else 'var(--white)'
     return f'''<div class="strip" style="top:{top}px;left:{left}px"><div class="booth"><small>BOOTH</small><strong>8428</strong></div>
-<div class="when" style="color:{w}">13–15 Nov<span>Suntec Level 4 · Halls 401–406</span></div></div>'''
+<div class="when" style="color:{w}">13–15 Nov<span>Suntec City Convention Centre<br>Level 4</span></div></div>'''
 def fine(txt,color='rgba(255,255,255,.92)'):
     return f'<div class="fine" style="color:{color}">{txt}</div>'
 OUT={}
