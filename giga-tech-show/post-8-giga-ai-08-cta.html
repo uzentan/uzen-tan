@@ -2,9 +2,9 @@
 <html lang="en"><head><meta charset="UTF-8"><title>gigaAI: try it</title>
 <link rel="stylesheet" href="assets/common.css">
 <style>
-.lg{position:absolute;left:56px;top:46px;z-index:6;background:var(--white);border-radius:22px;padding:6px 18px 2px;box-shadow:0 6px 0 var(--black)}
-.lg img{display:block;width:210px;height:auto}
-.pg{position:absolute;right:56px;top:62px;z-index:6;background:var(--white);color:var(--pink);font-weight:900;font-size:34px;letter-spacing:.06em;padding:8px 24px;border-radius:50px;box-shadow:0 6px 0 var(--black)}
+.brand{position:absolute;left:72px;top:52px;width:430px;z-index:6}
+.aicard{position:absolute;right:56px;top:46px;z-index:6;background:var(--white);border-radius:18px;padding:10px 16px 8px;box-shadow:0 6px 0 var(--black);transform:rotate(2deg)}
+.aicard img{display:block;width:176px;height:auto}
 .hd{position:absolute;left:72px;top:200px;z-index:4;font-weight:900;text-transform:uppercase;line-height:1.02;white-space:nowrap}
 .hd span{display:block}
 .hd.onpink{color:var(--white);text-shadow:0 8px 0 var(--black)}.hd.onpink em{font-style:normal;color:var(--teal)}
@@ -13,25 +13,29 @@
 .win{position:absolute;left:72px;width:936px;z-index:3;background:var(--white);border-radius:28px;overflow:hidden;box-shadow:0 10px 0 var(--black)}
 .win .bar{height:52px}
 .win .bar b{font-size:20px}
+.win .bar .n{margin-left:auto;margin-right:26px;color:var(--pink);font-weight:900;font-size:22px;letter-spacing:.08em}
 .win img{display:block;width:912px;margin:0 12px 12px;border-radius:14px}
-.chips{position:absolute;left:72px;right:72px;z-index:4;display:flex;flex-wrap:wrap;gap:12px}
-.chips span{background:var(--white);color:var(--pink);font-weight:800;font-size:24px;padding:8px 20px;border-radius:40px;box-shadow:0 5px 0 var(--black)}
+.tags{position:absolute;left:72px;right:72px;z-index:4;display:flex;flex-wrap:wrap;gap:14px}
+.tag2{display:inline-block;background:var(--white);color:var(--pink);font-weight:900;font-size:22px;letter-spacing:.08em;text-transform:uppercase;padding:9px 16px 8px;border-radius:5px;box-shadow:4px 5px 0 var(--black)}
+.tag2:nth-child(odd){transform:rotate(-1.5deg)}.tag2:nth-child(even){transform:rotate(1.2deg)}
 
-.cta-lg{position:absolute;left:56px;top:52px;z-index:6;background:var(--white);border-radius:28px;padding:10px 26px 4px;box-shadow:0 8px 0 var(--black)}
-.cta-lg img{display:block;width:330px}
-.cta-h{position:absolute;left:68px;top:270px;z-index:4;font-weight:900;text-transform:uppercase;line-height:.98;color:var(--pink);font-size:124px;-webkit-text-stroke:11px var(--white);paint-order:stroke fill;filter:drop-shadow(0 9px 0 var(--black))}
-.cta-h span{display:block}
-.cta-card{position:absolute;left:56px;top:720px;width:640px;z-index:5;background:var(--pink);color:var(--white);border-radius:32px;border:7px solid var(--white);box-shadow:0 10px 0 var(--black);padding:28px 36px;transform:rotate(-2deg)}
-.cta-card .k{font-weight:900;font-size:36px;letter-spacing:.12em;color:var(--teal)}
-.cta-card .b{font-weight:900;font-size:118px;line-height:1;letter-spacing:-.01em}
-.cta-card .v{font-weight:800;font-size:30px;line-height:1.2;margin-top:6px}
+.cta-try{position:absolute;left:68px;top:196px;z-index:4;font-weight:900;font-size:130px;line-height:1;color:var(--pink);-webkit-text-stroke:11px var(--white);paint-order:stroke fill;filter:drop-shadow(0 8px 0 var(--black))}
+.cta-logo{position:absolute;left:68px;top:350px;z-index:4;width:560px;background:var(--white);border-radius:28px;padding:26px 38px 22px;box-shadow:0 11px 0 var(--black);transform:rotate(-2deg)}
+.cta-logo img{display:block;width:100%;height:auto}
+.cta-fy{position:absolute;left:68px;top:690px;z-index:4;font-weight:900;font-size:96px;line-height:1;color:var(--pink);-webkit-text-stroke:9px var(--white);paint-order:stroke fill;filter:drop-shadow(0 7px 0 var(--black));white-space:nowrap}
+.cta-card{position:absolute;left:56px;top:830px;width:640px;z-index:5;background:var(--pink);color:var(--white);border-radius:30px;border:7px solid var(--white);box-shadow:0 10px 0 var(--black);padding:20px 34px 22px;transform:rotate(-2deg)}
+.cta-card .k{font-weight:900;font-size:30px;letter-spacing:.12em;color:var(--teal)}
+.cta-card .b{font-weight:900;font-size:92px;line-height:1;letter-spacing:-.01em}
+.cta-card .v{font-weight:800;font-size:26px;line-height:1.2;margin-top:4px}
 </style></head>
 <body><div class="post" id="post" style="background:var(--teal)">
 
-<div class="cta-lg"><img src="assets/giga-ai-logo.svg" alt="gigaAI"></div>
-<h1 class="cta-h"><span>Try giga AI</span><span>for yourself.</span></h1>
+<img class="brand" src="assets/logo-lockup.png" alt="giga! 5G+ feels good">
+<div class="cta-try">TRY</div>
+<div class="cta-logo"><img src="assets/giga-ai-logo-trim.svg" alt="gigaAI"></div>
+<div class="cta-fy">FOR YOURSELF.</div>
 <div class="cta-card"><div class="k">COME DOWN TO</div><div class="b">BOOTH 8428</div><div class="v">Suntec City Convention Centre, Level 4<br>13–15 Nov 2026</div></div>
-<img class="gino" src="assets/gino-wave.png" style="left:730px;top:760px;width:290px;z-index:5" alt="Gino waving">
+<img class="gino" src="assets/gino-wave.png" style="left:745px;top:790px;width:270px;z-index:5" alt="Gino waving">
 <div class="strip" style="top:1254px"><div class="booth"><small>BOOTH</small><strong>8428</strong></div>
 <div class="when" style="color:var(--pink)">13–15 Nov<span>Suntec City Convention Centre<br>Level 4</span></div></div>
 <div class="fine" style="color:rgba(0,0,0,.65)">Try gigaAI at The Tech Show 2026, booth 8428. Features shown are examples of what gigaAI can do.</div>
