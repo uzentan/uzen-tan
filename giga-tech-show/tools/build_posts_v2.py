@@ -79,13 +79,18 @@ css4='''
 .ticket .stub small{font-size:22px;letter-spacing:.16em}
 .ticket .stub b{font-size:100px;line-height:1}
 .ticket .main{flex:1;padding:26px 34px;display:flex;flex-direction:column;justify-content:center}
-.ticket:before,.ticket:after{content:"";position:absolute;width:44px;height:44px;border-radius:50%;background:var(--bg-notch,var(--pink));top:137px}
+.ticket:before,.ticket:after{content:"";position:absolute;width:44px;height:44px;border-radius:50%;background:var(--bg-notch,var(--pink));top:calc(50% - 22px)}
 .ticket:before{left:-22px}.ticket:after{right:-22px}
-.t1{left:90px;top:470px;transform:rotate(-3deg)}
-.t2{left:90px;top:810px;transform:rotate(3deg)}
-.k1{font-weight:900;font-size:38px;line-height:1.05}
-.k2{font-weight:900;font-size:86px;line-height:.98;letter-spacing:-.01em}
-.k3{font-weight:800;font-size:28px;color:#2a2a2a;margin-top:8px}
+.t1{left:90px;top:440px;height:420px;transform:rotate(-3deg)}
+.t1 .stub{width:200px}.t1 .stub b{font-size:130px}
+.t2{left:90px;top:900px;height:250px;transform:rotate(2.5deg)}
+.t2 .stub{width:150px}.t2 .stub b{font-size:76px}
+.up{display:inline-block;position:relative;font-weight:800;font-size:34px;color:#555;margin-right:18px}
+.up:after{content:"";position:absolute;left:-4px;right:-4px;top:52%;height:5px;background:var(--pink);transform:rotate(-6deg);border-radius:3px}
+.k1{font-weight:900;font-size:46px;line-height:1.05}
+.k2{font-weight:900;font-size:112px;line-height:.95;letter-spacing:-.01em}
+.k3{font-weight:800;font-size:32px;color:#2a2a2a;margin-top:10px}
+.t2 .k1{font-size:30px}.t2 .k3{font-size:24px;margin-top:4px}
 '''
 b4=f'''
 <div class="stripe"></div>
@@ -93,10 +98,10 @@ b4=f'''
 <div class="pre4">ONLY AT THE BOOTH</div>
 <h1 class="h4"><span>Exclusive</span><span><em>offers!</em></span></h1>
 <img class="gino" src="assets/gino-cart.png" style="left:775px;top:170px;width:270px;z-index:4" alt="Gino with shopping cart">
-<div class="ticket t1"><div class="stub"><small>DEAL</small><b>1</b></div><div class="main"><div class="k1">BUY 1 MONTH, GET</div><div class="k2">2 MONTHS <span style="color:var(--coral)">FREE!</span></div><div class="k3">AS LOW AS $5.30/MTH</div></div></div>
-<div class="ticket t2" style="--bg-notch:var(--teal)"><div class="stub"><small>DEAL</small><b>2</b></div><div class="main"><div class="k1">GOLDEN NUMBERS</div><div class="k2" style="font-size:120px;color:var(--coral)">$11.11</div><div class="k3">ONE-TIME PRICE</div></div></div>
+<div class="ticket t1"><div class="stub"><small>DEAL</small><b>1</b></div><div class="main"><div class="k1">BUY 1 MONTH, GET</div><div class="k2">2 MONTHS<br><span style="color:var(--coral)">FREE!</span></div><div class="k3">AS LOW AS $5.30/MTH</div></div></div>
+<div class="ticket t2" style="--bg-notch:var(--teal)"><div class="stub"><small>DEAL</small><b>2</b></div><div class="main"><div class="k1">GOLDEN NUMBERS</div><div><span class="up">U.P. $298</span><span class="k2" style="font-size:96px;color:var(--coral)">$11.11</span></div><div class="k3">ONE-TIME PRICE</div></div></div>
 {strip('pink')}
-{fine('Buy 1 month, get 2 months free (prices as low as $5.30/mth). Golden Numbers at $11.11 one-time. Booth exclusive, while stocks last. T&amp;Cs apply.')}'''
+{fine('Buy 1 month, get 2 months free (prices as low as $5.30/mth). Golden Numbers at $11.11 one-time (U.P. $298). Booth exclusive, while stocks last. T&amp;Cs apply.')}'''
 OUT['post-4-exclusive-offers']=HEAD.format(t='Post 4: Exclusive offers',css=css4,bg='background:var(--pink)',body=b4)
 
 # ---------------- 5: GOLDEN NUMBERS (giant price over number pattern) ----------------
