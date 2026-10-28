@@ -63,26 +63,21 @@ for i,(slug,label,(l1,l2),sub,chips,bg,tilt) in enumerate(FEATS, start=2):
 {fine(FINE,'rgba(0,0,0,.65)' if bg=='teal' else 'rgba(255,255,255,.92)')}'''
     slides.append((f'post-8-giga-ai-{i:02d}-{slug}',HEAD.format(t=f'gigaAI: {label}',css=CSS,bg='background:var(--teal)' if bg=='teal' else 'background:var(--pink)',body=body)))
 
-# cover: TRY [gigaAI logo] AT THE BOOTH!
-cover_css=CSS+'''
-.cv-chip{position:absolute;right:56px;top:66px;z-index:6;background:var(--teal);color:var(--pink);font-weight:900;font-size:34px;letter-spacing:.08em;padding:10px 26px;border-radius:14px;border:6px solid var(--white);box-shadow:0 7px 0 var(--black);transform:rotate(3deg)}
-.cv-try{position:absolute;left:68px;top:196px;z-index:4;font-weight:900;font-size:150px;line-height:1;color:var(--teal);text-shadow:0 9px 0 var(--black)}
-.cv-logo{position:absolute;left:68px;top:372px;z-index:4;width:640px;background:var(--white);border-radius:30px;padding:30px 44px 26px;box-shadow:0 12px 0 var(--black);transform:rotate(-2deg)}
+# cover: TRY [gigaAI logo] AT THE TECH SHOW (kept deliberately simple)
+cover_css=CSS+"""
+.cv-try{position:absolute;left:68px;top:210px;z-index:4;font-weight:900;font-size:190px;line-height:1;color:var(--teal);text-shadow:0 10px 0 var(--black)}
+.cv-logo{position:absolute;left:68px;top:450px;z-index:4;width:720px;background:var(--white);border-radius:34px;padding:36px 52px 30px;box-shadow:0 13px 0 var(--black);transform:rotate(-2deg)}
 .cv-logo img{display:block;width:100%;height:auto}
-.cv-at{position:absolute;left:68px;top:760px;z-index:4;font-weight:900;font-size:90px;line-height:1;color:var(--white);text-shadow:0 8px 0 var(--black);white-space:nowrap}
-.feat{top:900px;width:600px}
-.swipe{position:absolute;left:72px;top:1118px;z-index:5;width:470px;background:var(--teal);color:var(--pink);font-weight:900;font-size:32px;letter-spacing:.06em;padding:16px 80px 14px 28px;box-shadow:0 0 0 0 transparent;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%)}
-'''
-feats=''.join(f'<span class="tag2">{x}</span>' for x in ['Image Studio','Video Studio','Live Websites','Slides','Multi Chat','Experts & Legends'])
+.cv-at{position:absolute;left:68px;top:880px;z-index:4;font-weight:900;font-size:78px;line-height:1;color:var(--white);text-shadow:0 8px 0 var(--black);white-space:nowrap}
+.swipe{position:absolute;left:72px;top:1090px;z-index:5;width:400px;background:var(--teal);color:var(--pink);font-weight:900;font-size:32px;letter-spacing:.06em;padding:16px 80px 14px 28px;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%)}
+"""
 cover_body=f'''
 <img class="brand" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
-<div class="cv-chip">TECH SHOW 2026</div>
 <div class="cv-try">TRY</div>
 <div class="cv-logo"><img src="assets/giga-ai-logo-trim.svg" alt="gigaAI"></div>
-<div class="cv-at">AT THE BOOTH!</div>
-<div class="tags feat">{feats}</div>
-<img class="gino" src="assets/gino-phone.png" style="left:735px;top:830px;width:280px;z-index:5" alt="Gino with phone">
-<div class="swipe">SWIPE TO SEE MORE</div>
+<div class="cv-at">AT THE TECH SHOW</div>
+<img class="gino" src="assets/gino-phone.png" style="left:805px;top:975px;width:215px;z-index:5" alt="Gino with phone">
+<div class="swipe">SWIPE</div>
 {strip('pink')}
 {fine(FINE)}'''
 slides.insert(0,('post-8-giga-ai-01-cover',HEAD.format(t='gigaAI: cover',css=cover_css,bg='background:var(--pink)',body=cover_body)))

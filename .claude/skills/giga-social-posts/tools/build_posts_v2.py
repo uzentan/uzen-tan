@@ -110,7 +110,7 @@ css5='''
 .chip5{position:absolute;left:72px;top:128px;z-index:5;background:var(--teal);color:var(--pink);font-weight:900;font-size:38px;letter-spacing:.08em;padding:10px 28px;border-radius:14px;border:6px solid var(--white);box-shadow:0 7px 0 var(--black);transform:rotate(-2deg)}
 .h5{position:absolute;left:72px;top:226px;z-index:4;font-weight:900;text-transform:uppercase;line-height:1.02;font-size:80px;color:var(--white);text-shadow:0 7px 0 var(--black);white-space:nowrap}
 .h5 span{display:block}.h5 em{font-style:normal;color:var(--teal)}
-.burstwrap{position:absolute;left:160px;top:420px;width:760px;height:760px;z-index:3;transform:rotate(-4deg)}
+.burstwrap{position:absolute;left:44px;top:430px;width:740px;height:740px;z-index:3;transform:rotate(-4deg)}
 .burstwrap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .burstin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--white)}
 .burstin .gn{font-weight:900;font-size:46px;letter-spacing:.04em;text-shadow:0 5px 0 var(--black)}
@@ -125,45 +125,35 @@ b5=f'''
 <img class="logo" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
 <div class="chip5">TECH SHOW 2026 PROMO</div>
 <h1 class="h5"><span>Golden numbers</span><span>are <em>running out!</em></span></h1>
-<svg class="spk" style="left:60px;top:960px" width="70" height="70" viewBox="0 0 100 100"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z"/></svg>
-<svg class="spk" style="left:930px;top:400px" width="56" height="56" viewBox="0 0 100 100"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z"/></svg>
-<div class="tagx">BOOTH EXCLUSIVE</div>
 <div class="burstwrap"><svg viewBox="0 0 760 760"><polygon points="__PTS__" transform="translate(0,16)" fill="#000"/><polygon points="__PTS__" fill="#FF6F5C" stroke="#fff" stroke-width="14" stroke-linejoin="round"/></svg>
-<div class="burstin"><div class="gn">NOW JUST</div><div class="up">U.P. $298</div><div class="pr">$11.11</div><div class="ot">ONE-TIME PRICE</div></div></div>
-<img class="gino" src="assets/gino-phone.png" style="left:790px;top:930px;width:230px;z-index:5" alt="Gino with phone">
+<div class="burstin"><div class="up">U.P. $298</div><div class="pr">$11.11</div><div class="ot">ONE-TIME PRICE</div></div></div>
+<img class="gino" src="assets/gino-phone.png" style="left:800px;top:920px;width:225px;z-index:5" alt="Gino with phone">
 {strip('pink')}
 {fine('Golden Numbers at $11.11 one-time price (U.P. $298). Booth exclusive at The Tech Show 2026, while stocks last. T&amp;Cs apply.')}'''.replace('__PTS__','__PTS_VAL__')
 OUT['post-5-golden-numbers']=HEAD.format(t='Post 5: Golden numbers',css=css5,bg='background:var(--pink)',body=b5.replace('__PTS_VAL__',PTS5))
 
-# ---------------- 6: LAST DAY (pink-led: giant type, rocket Gino, CTA) ----------------
+# ---------------- 6: LAST DAY (simplified: giant type, rocket Gino, one offer card) ----------------
 css6='''
 .chip6{position:absolute;left:72px;top:128px;z-index:6;background:var(--teal);color:var(--pink);font-weight:900;font-size:38px;letter-spacing:.08em;padding:10px 28px;border-radius:14px;border:6px solid var(--white);box-shadow:0 7px 0 var(--black);transform:rotate(-2deg)}
-.date{position:absolute;right:56px;top:60px;z-index:6;background:var(--white);color:var(--pink);font-weight:900;font-size:40px;letter-spacing:.08em;padding:10px 28px;border-radius:16px;box-shadow:0 7px 0 var(--black);transform:rotate(4deg)}
 .h6{position:absolute;left:60px;top:240px;z-index:4;font-weight:900;text-transform:uppercase;line-height:.86;font-size:272px;color:var(--white);text-shadow:0 12px 0 var(--black);transform:rotate(-4deg);transform-origin:left top}
 .h6 span{display:block}.h6 em{font-style:normal;color:var(--teal)}
-.trail{position:absolute;z-index:1;left:420px;top:640px;width:620px;height:520px}
-.sticker{position:absolute;z-index:6;border-radius:26px;border:6px solid var(--white);box-shadow:0 8px 0 var(--black);font-weight:900;line-height:1.02;padding:18px 26px;width:540px}
-.s1{left:56px;top:740px;background:var(--white);color:var(--pink);font-size:44px;transform:rotate(-2deg)}
-.s1 b{display:block;font-size:76px;line-height:.98;margin-top:2px}
-.s1 small{display:block;font-size:24px;color:#2a2a2a;margin-top:6px;letter-spacing:.04em}
-.s2{left:76px;top:938px;background:var(--teal);color:var(--pink);font-size:38px;transform:rotate(2deg)}
-.s2 .row{display:flex;align-items:baseline;gap:16px}
-.s2 b{font-size:84px;color:var(--pink);letter-spacing:-.02em}
-.s2 .up{position:relative;font-weight:800;font-size:28px;color:#16595d}
-.s2 .up:after{content:"";position:absolute;left:-4px;right:-4px;top:54%;height:5px;background:var(--pink);transform:rotate(-6deg);border-radius:3px}
-.cta{position:absolute;z-index:6;left:56px;top:1128px;width:640px;white-space:nowrap;background:var(--black);color:var(--white);border-radius:60px;border:6px solid var(--white);box-shadow:0 8px 0 rgba(0,0,0,.35);padding:12px 28px;font-weight:900;font-size:31px;letter-spacing:.02em;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.cta em{font-style:normal;color:var(--teal)}
+.when6{position:absolute;left:72px;top:760px;z-index:4;font-weight:900;font-size:50px;line-height:1.1;color:var(--white);text-transform:uppercase}
+.when6 span{display:block;font-size:30px;font-weight:800;color:var(--teal);margin-top:6px;letter-spacing:.04em}
+.offer6{position:absolute;left:56px;top:1030px;width:968px;height:178px;z-index:6;background:var(--white);color:var(--pink);border-radius:28px;box-shadow:0 10px 0 var(--black);transform:rotate(-1deg);display:flex}
+.offer6 > div{flex:1;padding:22px 32px;display:flex;flex-direction:column;justify-content:center}
+.offer6 > div + div{border-left:5px dashed var(--pink)}
+.offer6 .a{font-weight:900;font-size:40px;line-height:1.02}
+.offer6 .a b{display:block;font-size:56px}
+.offer6 .s{font-weight:800;font-size:24px;color:#2a2a2a;margin-top:4px}
+.offer6 .p{font-weight:900;font-size:92px;line-height:.95;color:var(--coral);letter-spacing:-.02em}
 '''
 b6=f'''
 <img class="logo" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
 <div class="chip6">TECH SHOW 2026 PROMO</div>
-<div class="date">SUN 15 NOV</div>
-<svg class="trail" viewBox="0 0 620 520" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26" opacity=".85"><path d="M10 510C140 500 260 420 360 310S560 90 610 20"/></svg>
 <h1 class="h6"><span>Last</span><span><em>day!</em></span></h1>
-<img class="gino" src="assets/gino-rocket.png" style="left:610px;top:640px;width:420px;transform:rotate(10deg);z-index:5" alt="Gino rocket">
-<div class="sticker s1">BUY 1 MONTH,<b>GET 2 FREE!</b><small>AS LOW AS $5.30/MTH</small></div>
-<div class="sticker s2">GOLDEN NUMBERS<div class="row"><b>$11.11</b><span class="up">U.P. $298</span></div></div>
-<div class="cta"><span>COME DOWN TO <em>BOOTH 8428</em></span><svg width="46" height="36" viewBox="0 0 46 36" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h36M26 4l14 14-14 14"/></svg></div>
+<div class="when6">Sun 15 Nov<span>COME DOWN TO BOOTH 8428</span></div>
+<img class="gino" src="assets/gino-rocket.png" style="left:665px;top:605px;width:370px;transform:rotate(10deg);z-index:5" alt="Gino rocket">
+<div class="offer6"><div><div class="a">BUY 1 MONTH,<b>GET 2 FREE!</b></div><div class="s">As low as $5.30/mth</div></div><div><div class="a">GOLDEN NUMBERS</div><div class="p">$11.11</div></div></div>
 {strip('pink')}
 {fine('Offers valid on 15 Nov only at The Tech Show 2026, booth 8428, while stocks last. Buy 1 month, get 2 months free (prices as low as $5.30/mth); Golden Numbers at $11.11 one-time (U.P. $298). T&amp;Cs apply.')}'''
 OUT['post-6-last-day']=HEAD.format(t='Post 6: Last day',css=css6,bg='background:var(--pink)',body=b6)
