@@ -87,24 +87,31 @@ cover_body=f'''
 {fine(FINE)}'''
 slides.insert(0,('post-8-giga-ai-01-cover',HEAD.format(t='gigaAI: cover',css=cover_css,bg='background:var(--pink)',body=cover_body)))
 
-# CTA
-cta_css=CSS+'''
-.cta-try{position:absolute;left:68px;top:196px;z-index:4;font-weight:900;font-size:130px;line-height:1;color:var(--pink);-webkit-text-stroke:11px var(--white);paint-order:stroke fill;filter:drop-shadow(0 8px 0 var(--black))}
-.cta-logo{position:absolute;left:68px;top:350px;z-index:4;width:560px;background:var(--white);border-radius:28px;padding:26px 38px 22px;box-shadow:0 11px 0 var(--black);transform:rotate(-2deg)}
-.cta-logo img{display:block;width:100%;height:auto}
-.cta-fy{position:absolute;left:68px;top:690px;z-index:4;font-weight:900;font-size:96px;line-height:1;color:var(--pink);-webkit-text-stroke:9px var(--white);paint-order:stroke fill;filter:drop-shadow(0 7px 0 var(--black));white-space:nowrap}
-.cta-card{position:absolute;left:56px;top:830px;width:640px;z-index:5;background:var(--pink);color:var(--white);border-radius:30px;border:7px solid var(--white);box-shadow:0 10px 0 var(--black);padding:20px 34px 22px;transform:rotate(-2deg)}
-.cta-card .k{font-weight:900;font-size:30px;letter-spacing:.12em;color:var(--teal)}
-.cta-card .b{font-weight:900;font-size:92px;line-height:1;letter-spacing:-.01em}
-.cta-card .v{font-weight:800;font-size:26px;line-height:1.2;margin-top:4px}
-'''
+# CTA: "YOUR TURN" prompt box -> booth number (different structure from the cover)
+cta_css=CSS+"""
+.yt{position:absolute;left:68px;top:196px;z-index:4;font-weight:900;text-transform:uppercase;font-size:150px;line-height:1;color:var(--pink);-webkit-text-stroke:12px var(--white);paint-order:stroke fill;filter:drop-shadow(0 9px 0 var(--black));white-space:nowrap}
+.yts{position:absolute;left:72px;top:372px;z-index:4;font-weight:800;font-size:34px;line-height:1.25;color:#0c4f53}
+.pbox{position:absolute;left:56px;top:470px;width:968px;height:262px;z-index:5;background:var(--white);border-radius:30px;box-shadow:0 10px 0 var(--black);transform:rotate(-1.5deg);padding:30px 40px}
+.pbox .t{font-weight:700;font-size:56px;line-height:1.12;color:#1d1a1c;max-width:820px}
+.pbox .cur{display:inline-block;width:7px;height:52px;background:var(--pink);vertical-align:-8px;margin-left:6px}
+.pbox .plus{position:absolute;left:40px;bottom:30px;width:46px;height:46px;border:4px solid #c9c2c6;border-radius:50%;color:#c9c2c6;font-weight:900;font-size:34px;line-height:36px;text-align:center}
+.pbox .send{position:absolute;right:36px;bottom:26px;width:88px;height:88px;border-radius:50%;background:var(--pink);box-shadow:0 5px 0 var(--black);display:flex;align-items:center;justify-content:center}
+.pbox .try{position:absolute;left:110px;bottom:34px;font-weight:900;font-size:24px;letter-spacing:.14em;color:var(--pink)}
+.dots{position:absolute;left:440px;top:728px;z-index:4;width:200px;height:140px}
+.bc{position:absolute;left:56px;top:860px;width:740px;z-index:5;background:var(--pink);color:var(--white);border-radius:30px;border:7px solid var(--white);box-shadow:0 10px 0 var(--black);padding:16px 36px 20px;transform:rotate(1.5deg)}
+.bc .k{font-weight:900;font-size:34px;letter-spacing:.12em;color:var(--teal)}
+.bc .b1{font-weight:900;font-size:96px;line-height:.95;letter-spacing:.02em}
+.bc .b2{font-weight:900;font-size:176px;line-height:.9;letter-spacing:-.02em;text-shadow:0 8px 0 var(--black)}
+"""
 cta_body=f'''
 <img class="brand" src="assets/logo-lockup.png" alt="giga! 5G+ feels good">
-<div class="cta-try">TRY</div>
-<div class="cta-logo"><img src="assets/giga-ai-logo-trim.svg" alt="gigaAI"></div>
-<div class="cta-fy">FOR YOURSELF.</div>
-<div class="cta-card"><div class="k">COME DOWN TO</div><div class="b">BOOTH 8428</div><div class="v">Suntec City Convention Centre, Level 4<br>13–15 Nov 2026</div></div>
-<img class="gino" src="assets/gino-wave.png" style="left:745px;top:790px;width:270px;z-index:5" alt="Gino waving">
+<div class="aicard"><img src="assets/giga-ai-logo-trim.svg" alt="gigaAI"></div>
+<div class="yt">Your turn!</div>
+<div class="yts">Ask gigaAI anything, live at the booth.</div>
+<div class="pbox"><div class="t">Plan a 4-day trip to Singapore for my parents<span class="cur"></span></div><div class="plus">+</div><div class="try">TRY IT YOURSELF</div><div class="send"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 36V10M10 22l12-12 12 12"/></svg></div></div>
+<svg class="dots" viewBox="0 0 200 140" fill="none" stroke="#ED1285" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M60 8C40 50 80 70 100 100" stroke-dasharray="2 18"/><path d="M80 98l22 24 20-28"/></svg>
+<div class="bc"><div class="k">COME DOWN TO</div><div class="b1">BOOTH</div><div class="b2">8428</div></div>
+<img class="gino" src="assets/gino-wave.png" style="left:785px;top:850px;width:240px;z-index:5" alt="Gino waving">
 {strip('teal')}
 {fine(FINE,'rgba(0,0,0,.65)')}'''
 slides.append(('post-8-giga-ai-08-cta',HEAD.format(t='gigaAI: try it',css=cta_css,bg='background:var(--teal)',body=cta_body)))
