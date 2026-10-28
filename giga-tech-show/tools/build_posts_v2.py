@@ -104,37 +104,36 @@ b4=f'''
 {fine('Buy 1 month, get 2 months free (prices as low as $5.30/mth). Golden Numbers at $11.11 one-time (U.P. $298). Booth exclusive, while stocks last. T&amp;Cs apply.')}'''
 OUT['post-4-exclusive-offers']=HEAD.format(t='Post 4: Exclusive offers',css=css4,bg='background:var(--pink)',body=b4)
 
-# ---------------- 5: GOLDEN NUMBERS (giant price over number pattern) ----------------
+PTS5='380.0,8.0 426.4,57.3 484.8,23.1 515.4,83.5 581.1,67.1 593.5,133.6 661.1,136.4 654.2,203.8 718.4,225.5 692.8,288.2 748.2,327.1 706.0,380.0 748.2,432.9 692.8,471.8 718.4,534.5 654.2,556.2 661.1,623.6 593.5,626.4 581.1,692.9 515.4,676.5 484.8,736.9 426.4,702.7 380.0,752.0 333.6,702.7 275.2,736.9 244.6,676.5 178.9,692.9 166.5,626.4 98.9,623.6 105.8,556.2 41.6,534.5 67.2,471.8 11.8,432.9 54.0,380.0 11.8,327.1 67.2,288.2 41.6,225.5 105.8,203.8 98.9,136.4 166.5,133.6 178.9,67.1 244.6,83.5 275.2,23.1 333.6,57.3'
+# ---------------- 5: GOLDEN NUMBERS (clean: one big starburst price sticker) ----------------
 css5='''
-.pat{position:absolute;left:-80px;top:-60px;width:1300px;height:1500px;transform:rotate(-9deg);font-weight:900;font-size:128px;line-height:1.08;color:rgba(255,255,255,.14);letter-spacing:.04em;white-space:nowrap;overflow:hidden}
-.pat div{margin-left:0}.pat div:nth-child(even){margin-left:-260px}
-.burst{position:absolute;left:64px;top:150px;z-index:5;width:210px;height:210px;background:var(--teal);color:var(--pink);font-weight:900;font-size:44px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1;transform:rotate(-10deg);
- clip-path:polygon(50% 0,61% 9%,75% 5%,79% 19%,93% 21%,91% 35%,100% 46%,92% 58%,97% 72%,84% 77%,80% 91%,66% 88%,56% 100%,45% 90%,31% 96%,26% 82%,12% 81%,14% 67%,2% 57%,10% 46%,3% 33%,16% 28%,17% 14%,31% 15%,38% 3%)}
-.gn{position:absolute;right:64px;top:176px;z-index:5;text-align:right;font-weight:900;font-size:64px;line-height:1;color:var(--white);text-shadow:0 6px 0 var(--black);letter-spacing:.02em}
-.price{position:absolute;left:0;right:0;top:330px;text-align:center;z-index:5;font-weight:900;font-size:262px;line-height:1;color:var(--coral);-webkit-text-stroke:22px var(--white);paint-order:stroke fill;filter:drop-shadow(0 14px 0 var(--black));letter-spacing:-.03em}
-.ot{position:absolute;left:0;right:0;top:640px;text-align:center;z-index:5;font-weight:800;font-size:34px;letter-spacing:.2em;color:var(--white)}
-.band{position:absolute;left:-60px;right:-60px;top:720px;height:150px;background:var(--teal);z-index:4;transform:rotate(-3deg);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:74px;color:var(--pink);letter-spacing:.02em;box-shadow:0 10px 0 var(--black);white-space:nowrap}
-.num{position:absolute;z-index:5;background:var(--white);color:var(--coral);border-radius:22px;padding:14px 28px;font-weight:900;font-size:60px;letter-spacing:.06em;box-shadow:0 8px 0 var(--black);transform:rotate(4deg)}
-.prog{position:absolute;z-index:5;left:430px;right:72px;top:1120px}
-.prog .l{display:flex;justify-content:space-between;font-weight:900;font-size:22px;letter-spacing:.1em;color:var(--white);margin-bottom:8px}
-.prog .t{height:30px;border-radius:15px;background:var(--white);overflow:hidden;border:4px solid var(--white)}
-.prog .t i{display:block;width:16%;height:100%;background:var(--pink)}
+.pre5{position:absolute;left:72px;top:134px;font-weight:900;font-size:44px;letter-spacing:.18em;color:var(--teal)}
+.h5{position:absolute;left:72px;top:186px;z-index:4;font-weight:900;text-transform:uppercase;line-height:1.02;font-size:80px;color:var(--white);text-shadow:0 7px 0 var(--black);white-space:nowrap}
+.h5 span{display:block}.h5 em{font-style:normal;color:var(--teal)}
+.burstwrap{position:absolute;left:160px;top:400px;width:760px;height:760px;z-index:3;transform:rotate(-4deg)}
+.burstwrap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.burstin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--white)}
+.burstin .gn{font-weight:900;font-size:46px;letter-spacing:.04em;text-shadow:0 5px 0 var(--black)}
+.burstin .up{position:relative;display:inline-block;font-weight:800;font-size:46px;color:var(--white);opacity:.95;margin-top:6px}
+.burstin .up:after{content:"";position:absolute;left:-8px;right:-8px;top:54%;height:7px;background:var(--black);transform:rotate(-5deg);border-radius:4px}
+.burstin .pr{font-weight:900;font-size:230px;line-height:.95;letter-spacing:-.03em;text-shadow:0 12px 0 var(--black);margin-top:4px}
+.burstin .ot{font-weight:900;font-size:36px;letter-spacing:.2em;color:var(--pink);background:var(--white);border-radius:12px;padding:6px 22px;margin-top:10px;box-shadow:0 5px 0 var(--black)}
+.tagx{position:absolute;left:64px;top:470px;z-index:6;background:var(--teal);color:var(--pink);font-weight:900;font-size:30px;letter-spacing:.1em;padding:10px 24px;border-radius:12px;border:5px solid var(--white);box-shadow:0 6px 0 var(--black);transform:rotate(-8deg)}
+.spk{position:absolute;fill:var(--white);z-index:2}
 '''
-nums=''.join(f'<div>{"  ".join(["8888 8888","6666 6666","9999 9999","1111 1111"])}</div>' for _ in range(12))
 b5=f'''
-<div class="pat">{nums}</div>
 <img class="logo" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
-<div class="burst">HURRY!</div>
-<div class="gn">GOLDEN<br>NUMBERS</div>
-<div class="price">$11.11</div>
-<div class="ot">ONE-TIME PRICE</div>
-<div class="band">ARE RUNNING OUT!</div>
-<img class="gino" src="assets/gino-phone.png" style="left:70px;top:880px;width:270px;z-index:5" alt="Gino with phone">
-<div class="num" style="left:430px;top:930px">8888 8888</div>
-<div class="prog"><div class="l"><span>GOING FAST</span><span>GRAB YOURS</span></div><div class="t"><i></i></div></div>
+<div class="pre5">HURRY!</div>
+<h1 class="h5"><span>Golden numbers</span><span>are <em>running out</em></span></h1>
+<svg class="spk" style="left:60px;top:960px" width="70" height="70" viewBox="0 0 100 100"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z"/></svg>
+<svg class="spk" style="left:930px;top:400px" width="56" height="56" viewBox="0 0 100 100"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z"/></svg>
+<div class="tagx">BOOTH EXCLUSIVE</div>
+<div class="burstwrap"><svg viewBox="0 0 760 760"><polygon points="__PTS__" transform="translate(0,16)" fill="#000"/><polygon points="__PTS__" fill="#FF6F5C" stroke="#fff" stroke-width="14" stroke-linejoin="round"/></svg>
+<div class="burstin"><div class="gn">NOW JUST</div><div class="up">U.P. $298</div><div class="pr">$11.11</div><div class="ot">ONE-TIME PRICE</div></div></div>
+<img class="gino" src="assets/gino-phone.png" style="left:790px;top:930px;width:230px;z-index:5" alt="Gino with phone">
 {strip('pink')}
-{fine('Golden Numbers at $11.11 one-time price. Booth exclusive at The Tech Show 2026, while stocks last. T&amp;Cs apply.')}'''
-OUT['post-5-golden-numbers']=HEAD.format(t='Post 5: Golden numbers',css=css5,bg='background:var(--pink)',body=b5)
+{fine('Golden Numbers at $11.11 one-time price (U.P. $298). Booth exclusive at The Tech Show 2026, while stocks last. T&amp;Cs apply.')}'''.replace('__PTS__','__PTS_VAL__')
+OUT['post-5-golden-numbers']=HEAD.format(t='Post 5: Golden numbers',css=css5,bg='background:var(--pink)',body=b5.replace('__PTS_VAL__',PTS5))
 
 # ---------------- 6: LAST DAY (giant type, diagonal rocket) ----------------
 css6='''
