@@ -165,12 +165,12 @@ b6=f'''
 CSS6ADD=""".pr6{display:flex;align-items:baseline;gap:14px}
 .up6{position:relative;font-weight:800;font-size:26px;color:#555;white-space:nowrap}
 .up6:after{content:"";position:absolute;left:-3px;right:-3px;top:54%;height:4px;background:var(--pink);transform:rotate(-5deg);border-radius:2px}
-.bg6{position:absolute;inset:0;z-index:0;background:linear-gradient(155deg,#FF5FB0 0%,#ED1285 48%,#C90D74 100%)}
-.moon{position:absolute;left:520px;top:430px;width:700px;height:700px;border-radius:50%;z-index:1;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.42),rgba(255,255,255,.12) 55%,rgba(255,255,255,0) 72%)}
+.bg6{position:absolute;inset:0;z-index:0;background:linear-gradient(160deg,#F5329C 0%,#ED1285 55%,#DB0F7C 100%)}
+.moon{position:absolute;left:520px;top:430px;width:700px;height:700px;border-radius:50%;z-index:1;background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.2),rgba(255,255,255,.06) 50%,rgba(255,255,255,0) 70%)}
 .orbit{position:absolute;left:380px;top:300px;width:1000px;height:1000px;z-index:1;border-radius:50%;border:5px dashed rgba(255,255,255,.16);transform:rotate(-20deg)}
 .stars6{position:absolute;inset:0;z-index:1;background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 3px,transparent 4px);background-size:140px 140px;background-position:30px 40px;-webkit-mask-image:linear-gradient(135deg,transparent 35%,#000 100%);mask-image:linear-gradient(135deg,transparent 35%,#000 100%)}
 """
-b6='<div class="bg6"></div><div class="moon"></div><div class="orbit"></div><div class="stars6"></div>'+b6
+b6='<div class="bg6"></div><div class="moon"></div>'+b6
 OUT['post-6-last-day']=HEAD.format(t='Post 6: Last day',css=css6+CSS6ADD,bg='background:var(--pink)',body=b6)
 
 for n,h in OUT.items(): open(f'{n}.html','w').write(h)
