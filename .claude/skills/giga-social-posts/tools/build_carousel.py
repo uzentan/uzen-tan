@@ -57,7 +57,7 @@ for i,(slug,label,(l1,l2),sub,chips,bg,tilt) in enumerate(FEATS, start=2):
 <div class="aicard"><img src="assets/giga-ai-logo-trim.svg" alt="gigaAI"></div>
 <h1 class="hd {on}" style="font-size:{fs}px"><span>{l1}</span><span><em>{l2}</em></span></h1>
 <p class="sub" style="top:{200+int(fs*2.1)+14}px;color:{subcol}">{sub}</p>
-<div class="win" style="top:{wintop}px;height:{winh}px;transform:rotate({tilt}deg)"><div class="bar"><i></i><i></i><i></i><b>{label}</b><span class="n">{i-1}/{n}</span></div><img src="assets/gigaai/{slug}.png" alt="{label}"></div>
+<div class="win" style="top:{wintop}px;height:{winh}px;transform:rotate({tilt}deg)"><div class="bar"><i></i><i></i><i></i><b>{label}</b></div><img src="assets/gigaai/{slug}.png" alt="{label}"></div>
 {('<div class="tags" style="top:%dpx">%s</div>'%(chipstop,chiphtml)) if chips else ''}
 {strip('teal' if bg=='teal' else 'pink')}
 {fine(FINE,'rgba(0,0,0,.65)' if bg=='teal' else 'rgba(255,255,255,.92)')}'''
