@@ -135,29 +135,38 @@ b5=f'''
 {fine('Golden Numbers at $11.11 one-time price (U.P. $298). Booth exclusive at The Tech Show 2026, while stocks last. T&amp;Cs apply.')}'''.replace('__PTS__','__PTS_VAL__')
 OUT['post-5-golden-numbers']=HEAD.format(t='Post 5: Golden numbers',css=css5,bg='background:var(--pink)',body=b5.replace('__PTS_VAL__',PTS5))
 
-# ---------------- 6: LAST DAY (giant type, diagonal rocket) ----------------
+# ---------------- 6: LAST DAY (pink-led: giant type, rocket Gino, CTA) ----------------
 css6='''
-.h6{position:absolute;left:52px;top:130px;z-index:4;font-weight:900;text-transform:uppercase;line-height:.84;font-size:318px;color:var(--pink);-webkit-text-stroke:20px var(--white);paint-order:stroke fill;filter:drop-shadow(0 12px 0 var(--black));transform:rotate(-5deg);transform-origin:left top}
-.h6 span{display:block}
-.date{position:absolute;right:56px;top:54px;z-index:6;background:var(--pink);color:var(--white);font-weight:900;font-size:44px;letter-spacing:.08em;padding:12px 32px;border-radius:16px;border:6px solid var(--white);box-shadow:0 7px 0 var(--black);transform:rotate(4deg)}
-.trail{position:absolute;z-index:1;left:220px;top:640px;width:760px;height:560px}
-.sticker{position:absolute;z-index:6;border-radius:26px;border:6px solid var(--white);box-shadow:0 8px 0 var(--black);font-weight:900;line-height:1.02;padding:20px 28px}
-.s1{left:56px;top:1040px;width:470px;background:var(--pink);color:var(--white);font-size:44px;transform:rotate(-3deg)}
-.s1 small{display:block;font-size:22px;color:var(--teal);margin-top:6px;letter-spacing:.06em}
-.s2{left:560px;top:1060px;width:460px;background:var(--white);color:var(--pink);font-size:36px;transform:rotate(3deg)}
-.s2 b{display:block;font-size:84px;color:var(--coral);letter-spacing:-.02em;margin-top:2px}
+.chip6{position:absolute;left:72px;top:128px;z-index:6;background:var(--teal);color:var(--pink);font-weight:900;font-size:38px;letter-spacing:.08em;padding:10px 28px;border-radius:14px;border:6px solid var(--white);box-shadow:0 7px 0 var(--black);transform:rotate(-2deg)}
+.date{position:absolute;right:56px;top:60px;z-index:6;background:var(--white);color:var(--pink);font-weight:900;font-size:40px;letter-spacing:.08em;padding:10px 28px;border-radius:16px;box-shadow:0 7px 0 var(--black);transform:rotate(4deg)}
+.h6{position:absolute;left:60px;top:240px;z-index:4;font-weight:900;text-transform:uppercase;line-height:.86;font-size:272px;color:var(--white);text-shadow:0 12px 0 var(--black);transform:rotate(-4deg);transform-origin:left top}
+.h6 span{display:block}.h6 em{font-style:normal;color:var(--teal)}
+.trail{position:absolute;z-index:1;left:420px;top:640px;width:620px;height:520px}
+.sticker{position:absolute;z-index:6;border-radius:26px;border:6px solid var(--white);box-shadow:0 8px 0 var(--black);font-weight:900;line-height:1.02;padding:18px 26px;width:540px}
+.s1{left:56px;top:740px;background:var(--white);color:var(--pink);font-size:44px;transform:rotate(-2deg)}
+.s1 b{display:block;font-size:76px;line-height:.98;margin-top:2px}
+.s1 small{display:block;font-size:24px;color:#2a2a2a;margin-top:6px;letter-spacing:.04em}
+.s2{left:76px;top:938px;background:var(--teal);color:var(--pink);font-size:38px;transform:rotate(2deg)}
+.s2 .row{display:flex;align-items:baseline;gap:16px}
+.s2 b{font-size:84px;color:var(--pink);letter-spacing:-.02em}
+.s2 .up{position:relative;font-weight:800;font-size:28px;color:#16595d}
+.s2 .up:after{content:"";position:absolute;left:-4px;right:-4px;top:54%;height:5px;background:var(--pink);transform:rotate(-6deg);border-radius:3px}
+.cta{position:absolute;z-index:6;left:56px;top:1128px;width:640px;white-space:nowrap;background:var(--black);color:var(--white);border-radius:60px;border:6px solid var(--white);box-shadow:0 8px 0 rgba(0,0,0,.35);padding:12px 28px;font-weight:900;font-size:31px;letter-spacing:.02em;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cta em{font-style:normal;color:var(--teal)}
 '''
 b6=f'''
-<img class="logo" src="assets/logo-lockup.png" alt="giga! 5G+ feels good" style="left:72px;top:52px;width:400px;z-index:6">
+<img class="logo" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
+<div class="chip6">TECH SHOW 2026 PROMO</div>
 <div class="date">SUN 15 NOV</div>
-<svg class="trail" viewBox="0 0 760 560" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"><path d="M20 540C180 520 330 420 470 300S700 100 740 20"/></svg>
-<h1 class="h6" style="top:196px"><span>Last</span><span style="margin-left:90px">day!</span></h1>
-<img class="gino" src="assets/gino-rocket.png" style="left:560px;top:560px;width:470px;transform:rotate(10deg);z-index:5" alt="Gino rocket">
-<div class="sticker s1">BUY 1 MONTH, GET 2 FREE!<small>AS LOW AS $5.30/MTH</small></div>
-<div class="sticker s2">GOLDEN NUMBERS<b>$11.11</b></div>
-{strip('teal')}
-{fine('Offers valid on 15 Nov only at The Tech Show 2026, booth 8428, while stocks last. Buy 1 month, get 2 months free (prices as low as $5.30/mth); Golden Numbers at $11.11 one-time. T&amp;Cs apply.','rgba(0,0,0,.65)')}'''
-OUT['post-6-last-day']=HEAD.format(t='Post 6: Last day',css=css6,bg='background:var(--teal)',body=b6)
+<svg class="trail" viewBox="0 0 620 520" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26" opacity=".85"><path d="M10 510C140 500 260 420 360 310S560 90 610 20"/></svg>
+<h1 class="h6"><span>Last</span><span><em>day!</em></span></h1>
+<img class="gino" src="assets/gino-rocket.png" style="left:610px;top:640px;width:420px;transform:rotate(10deg);z-index:5" alt="Gino rocket">
+<div class="sticker s1">BUY 1 MONTH,<b>GET 2 FREE!</b><small>AS LOW AS $5.30/MTH</small></div>
+<div class="sticker s2">GOLDEN NUMBERS<div class="row"><b>$11.11</b><span class="up">U.P. $298</span></div></div>
+<div class="cta"><span>COME DOWN TO <em>BOOTH 8428</em></span><svg width="46" height="36" viewBox="0 0 46 36" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h36M26 4l14 14-14 14"/></svg></div>
+{strip('pink')}
+{fine('Offers valid on 15 Nov only at The Tech Show 2026, booth 8428, while stocks last. Buy 1 month, get 2 months free (prices as low as $5.30/mth); Golden Numbers at $11.11 one-time (U.P. $298). T&amp;Cs apply.')}'''
+OUT['post-6-last-day']=HEAD.format(t='Post 6: Last day',css=css6,bg='background:var(--pink)',body=b6)
 
 for n,h in OUT.items(): open(f'{n}.html','w').write(h)
 print(list(OUT))
