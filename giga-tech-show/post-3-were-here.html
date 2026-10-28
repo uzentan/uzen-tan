@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><title>Post 3: We're here</title>
 <link rel="stylesheet" href="assets/common.css">
-<style></style></head>
-<body><div class="post" id="post">
-<img class="logo" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
-<div class="pre" style="top:128px;font-size:36px">THE TECH SHOW 2026</div>
-<h1 class="headline" style="top:176px;font-size:178px;line-height:.98"><span>We're</span><span><em>here!</em></span></h1>
-<img class="gino" src="assets/gino-dance.png" style="left:690px;top:170px;width:340px" alt="Gino dancing">
-<div class="window" style="top:600px;height:620px" data-placeholder="booth-photo">
- <div class="bar"><i></i><i></i><i></i><b>LIVE FROM BOOTH 8428</b></div>
- <div class="screen"><div class="ph"><strong>[ BOOTH PHOTO HERE ]</strong><span>Drop in the real booth photo on event day</span></div></div></div>
-<div class="strip" style="top:1254px"><div class="booth"><small>BOOTH</small><strong>8428</strong></div>
-<div class="when">13–15 Nov<span>Suntec Level 4 · Halls 401–406</span></div></div>
+<style>
+.photo{position:absolute;inset:0;background:repeating-linear-gradient(135deg,#F3E8EE 0 36px,#EBDDE5 36px 72px);display:flex;align-items:flex-start;justify-content:center}
+.photo .frame{position:absolute;left:36px;right:36px;top:36px;height:900px;border:6px dashed var(--pink);border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--pink);padding-bottom:140px}
+.photo strong{font-weight:900;font-size:60px;letter-spacing:.1em}
+.photo span{font-weight:700;font-size:28px;color:#2a2a2a;margin-top:10px}
+.panel{position:absolute;left:0;bottom:0;width:1080px;height:700px;background:var(--pink);clip-path:polygon(0 17%,100% 0,100% 100%,0 100%);z-index:2}
+.pill{position:absolute;z-index:6;background:var(--white);border-radius:60px;padding:12px 30px;box-shadow:0 6px 0 var(--black)}
+.h3{position:absolute;left:64px;top:810px;z-index:5;font-weight:900;text-transform:uppercase;line-height:.88;color:var(--white);text-shadow:0 10px 0 var(--black);transform:rotate(-3deg);transform-origin:left top}
+.h3 span{display:block;font-size:176px}
+.h3 em{font-style:normal;color:var(--teal)}
+.tc{position:absolute;right:56px;top:56px;z-index:6;background:var(--pink);color:var(--white);font-weight:900;font-size:30px;letter-spacing:.1em;padding:12px 28px;border-radius:14px;border:5px solid var(--white);box-shadow:0 6px 0 var(--black)}
+</style></head>
+<body><div class="post" id="post" style="background:#EBDDE5">
 
+<div class="photo" data-placeholder="booth-photo"><div class="frame"><strong>[ BOOTH PHOTO HERE ]</strong><span>Drop in the real booth photo on event day</span></div></div>
+<div class="pill" style="left:56px;top:56px"><img src="assets/logo-lockup.png" style="display:block;width:380px" alt="giga! 5G+ feels good"></div>
+<div class="tc">THE TECH SHOW 2026</div>
+<div class="panel"></div>
+<img class="gino" src="assets/gino-dance.png" style="left:700px;top:640px;width:380px;z-index:5" alt="Gino dancing">
+<h1 class="h3"><span>We're</span><span><em>here!</em></span></h1>
+<div class="strip" style="top:1262px;left:64px"><div class="booth"><small>BOOTH</small><strong>8428</strong></div>
+<div class="when" style="color:var(--white)">13–15 Nov<span>Suntec Level 4 · Halls 401–406</span></div></div>
 </div></body></html>
