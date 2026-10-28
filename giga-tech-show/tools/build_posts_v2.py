@@ -107,10 +107,10 @@ OUT['post-4-exclusive-offers']=HEAD.format(t='Post 4: Exclusive offers',css=css4
 PTS5='380.0,8.0 426.4,57.3 484.8,23.1 515.4,83.5 581.1,67.1 593.5,133.6 661.1,136.4 654.2,203.8 718.4,225.5 692.8,288.2 748.2,327.1 706.0,380.0 748.2,432.9 692.8,471.8 718.4,534.5 654.2,556.2 661.1,623.6 593.5,626.4 581.1,692.9 515.4,676.5 484.8,736.9 426.4,702.7 380.0,752.0 333.6,702.7 275.2,736.9 244.6,676.5 178.9,692.9 166.5,626.4 98.9,623.6 105.8,556.2 41.6,534.5 67.2,471.8 11.8,432.9 54.0,380.0 11.8,327.1 67.2,288.2 41.6,225.5 105.8,203.8 98.9,136.4 166.5,133.6 178.9,67.1 244.6,83.5 275.2,23.1 333.6,57.3'
 # ---------------- 5: GOLDEN NUMBERS (clean: one big starburst price sticker) ----------------
 css5='''
-.pre5{position:absolute;left:72px;top:134px;font-weight:900;font-size:44px;letter-spacing:.18em;color:var(--teal)}
-.h5{position:absolute;left:72px;top:186px;z-index:4;font-weight:900;text-transform:uppercase;line-height:1.02;font-size:80px;color:var(--white);text-shadow:0 7px 0 var(--black);white-space:nowrap}
+.chip5{position:absolute;left:72px;top:128px;z-index:5;background:var(--teal);color:var(--pink);font-weight:900;font-size:38px;letter-spacing:.08em;padding:10px 28px;border-radius:14px;border:6px solid var(--white);box-shadow:0 7px 0 var(--black);transform:rotate(-2deg)}
+.h5{position:absolute;left:72px;top:226px;z-index:4;font-weight:900;text-transform:uppercase;line-height:1.02;font-size:80px;color:var(--white);text-shadow:0 7px 0 var(--black);white-space:nowrap}
 .h5 span{display:block}.h5 em{font-style:normal;color:var(--teal)}
-.burstwrap{position:absolute;left:160px;top:400px;width:760px;height:760px;z-index:3;transform:rotate(-4deg)}
+.burstwrap{position:absolute;left:160px;top:420px;width:760px;height:760px;z-index:3;transform:rotate(-4deg)}
 .burstwrap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .burstin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--white)}
 .burstin .gn{font-weight:900;font-size:46px;letter-spacing:.04em;text-shadow:0 5px 0 var(--black)}
@@ -123,8 +123,8 @@ css5='''
 '''
 b5=f'''
 <img class="logo" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
-<div class="pre5">HURRY!</div>
-<h1 class="h5"><span>Golden numbers</span><span>are <em>running out</em></span></h1>
+<div class="chip5">TECH SHOW 2026 PROMO</div>
+<h1 class="h5"><span>Golden numbers</span><span>are <em>running out!</em></span></h1>
 <svg class="spk" style="left:60px;top:960px" width="70" height="70" viewBox="0 0 100 100"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z"/></svg>
 <svg class="spk" style="left:930px;top:400px" width="56" height="56" viewBox="0 0 100 100"><path d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0Z"/></svg>
 <div class="tagx">BOOTH EXCLUSIVE</div>
