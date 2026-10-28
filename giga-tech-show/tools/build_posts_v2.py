@@ -104,6 +104,11 @@ b4=f'''
 {fine('Buy 1 month, get 2 months free (prices as low as $5.30/mth). Golden Numbers at $11.11 one-time (U.P. $298). Booth exclusive, while stocks last. T&amp;Cs apply.')}'''
 OUT['post-4-exclusive-offers']=HEAD.format(t='Post 4: Exclusive offers',css=css4,bg='background:var(--pink)',body=b4)
 
+CSS5ADD=""".bg5{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 760px 700px at 42% 58%,#FF6FB5 0%,#F43A9E 38%,#ED1285 65%,#D60F7A 100%)}
+.rings{position:absolute;left:-260px;top:150px;width:1100px;height:1100px;z-index:1;border-radius:50%;border:0;background:repeating-radial-gradient(circle at center,rgba(255,255,255,.0) 0 62px,rgba(255,255,255,.13) 62px 66px)}
+.halft{position:absolute;right:-40px;top:380px;width:520px;height:520px;z-index:1;background-image:radial-gradient(circle,rgba(255,255,255,.28) 0 5px,transparent 6px);background-size:34px 34px;-webkit-mask-image:radial-gradient(circle at 100% 40%,#000 0,transparent 70%);mask-image:radial-gradient(circle at 100% 40%,#000 0,transparent 70%)}
+.vig{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(150,0,80,.18) 100%)}
+"""
 PTS5='380.0,8.0 426.4,57.3 484.8,23.1 515.4,83.5 581.1,67.1 593.5,133.6 661.1,136.4 654.2,203.8 718.4,225.5 692.8,288.2 748.2,327.1 706.0,380.0 748.2,432.9 692.8,471.8 718.4,534.5 654.2,556.2 661.1,623.6 593.5,626.4 581.1,692.9 515.4,676.5 484.8,736.9 426.4,702.7 380.0,752.0 333.6,702.7 275.2,736.9 244.6,676.5 178.9,692.9 166.5,626.4 98.9,623.6 105.8,556.2 41.6,534.5 67.2,471.8 11.8,432.9 54.0,380.0 11.8,327.1 67.2,288.2 41.6,225.5 105.8,203.8 98.9,136.4 166.5,133.6 178.9,67.1 244.6,83.5 275.2,23.1 333.6,57.3'
 # ---------------- 5: GOLDEN NUMBERS (clean: one big starburst price sticker) ----------------
 css5='''
@@ -130,7 +135,8 @@ b5=f'''
 <img class="gino" src="assets/gino-phone.png" style="left:800px;top:920px;width:225px;z-index:5" alt="Gino with phone">
 {strip('pink')}
 {fine('Golden Numbers at $11.11 one-time price (U.P. $298). Booth exclusive at The Tech Show 2026, while stocks last. T&amp;Cs apply.')}'''.replace('__PTS__','__PTS_VAL__')
-OUT['post-5-golden-numbers']=HEAD.format(t='Post 5: Golden numbers',css=css5,bg='background:var(--pink)',body=b5.replace('__PTS_VAL__',PTS5))
+b5='<div class="bg5"></div><div class="rings"></div><div class="halft"></div><div class="vig"></div>'+b5
+OUT['post-5-golden-numbers']=HEAD.format(t='Post 5: Golden numbers',css=css5+CSS5ADD,bg='background:var(--pink)',body=b5.replace('__PTS_VAL__',PTS5))
 
 # ---------------- 6: LAST DAY (simplified: giant type, rocket Gino, one offer card) ----------------
 css6='''
