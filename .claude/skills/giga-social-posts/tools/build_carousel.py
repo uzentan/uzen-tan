@@ -69,7 +69,7 @@ cover_css=CSS+"""
 .cv-logo{position:absolute;left:68px;top:450px;z-index:4;width:720px;background:var(--white);border-radius:34px;padding:36px 52px 30px;box-shadow:0 13px 0 var(--black);transform:rotate(-2deg)}
 .cv-logo img{display:block;width:100%;height:auto}
 .cv-at{position:absolute;left:68px;top:880px;z-index:4;font-weight:900;font-size:78px;line-height:1;color:var(--white);text-shadow:0 8px 0 var(--black);white-space:nowrap}
-.swipe{position:absolute;left:72px;top:1090px;z-index:5;width:400px;background:var(--teal);color:var(--pink);font-weight:900;font-size:32px;letter-spacing:.06em;padding:16px 80px 14px 28px;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%)}
+.swipe{position:absolute;left:72px;top:1086px;z-index:5;width:700px;white-space:nowrap;background:var(--teal);color:var(--pink);font-weight:900;font-size:32px;letter-spacing:.06em;padding:18px 90px 16px 30px;clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%)}
 """
 cover_body=f'''
 <img class="brand" src="assets/logo-lockup-onpink.png" alt="giga! 5G+ feels good">
@@ -77,7 +77,7 @@ cover_body=f'''
 <div class="cv-logo"><img src="assets/giga-ai-logo-trim.svg" alt="gigaAI"></div>
 <div class="cv-at">AT THE TECH SHOW</div>
 <img class="gino" src="assets/gino-phone.png" style="left:805px;top:975px;width:215px;z-index:5" alt="Gino with phone">
-<div class="swipe">SWIPE</div>
+<div class="swipe">COME TRY IT AT BOOTH 8428</div>
 {strip('pink')}
 {fine(FINE)}'''
 slides.insert(0,('post-8-giga-ai-01-cover',HEAD.format(t='gigaAI: cover',css=cover_css,bg='background:var(--pink)',body=cover_body)))
